@@ -134,13 +134,15 @@ function printBMIResult(BMIInfo){
 
     let bmiCategory;
     if(BMIInfo.BMI < 18.5){
-        bmiCategory = "Underweight";
+        bmiCategory = "you're Underweight";
     } else if(BMIInfo.BMI >= 18.5 && BMIInfo.BMI <= 24.9){
         bmiCategory = "Normal Weight";
     } else if(BMIInfo.BMI >= 25 && BMIInfo.BMI <= 29.9){
-        bmiCategory = "Overweight";
-    } else {
-        bmiCategory = "Obesity";
+        bmiCategory = "Your're Overweight";
+    } else if(BMIInfo.BMI >= 30&& BMIInfo.BMI < 40){
+        bmiCategory = "Obese";
+    } else{
+        bmiCategory = "You're in severe case of obesity Consult with your doctor";
     }
 
     document.getElementById('bmi-category').innerHTML = `${bmiCategory}`;
